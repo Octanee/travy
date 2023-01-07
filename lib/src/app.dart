@@ -1,5 +1,6 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travy/src/common.dart';
+import 'package:travy/src/main_nav.dart';
 import 'package:travy/src/pages/home_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.grey.shade100,
         textTheme: GoogleFonts.robotoTextTheme(),
       ),
-      home: const HomePage(),
+      home: const MainNav(),
     );
   }
 }
