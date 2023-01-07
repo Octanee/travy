@@ -1,7 +1,8 @@
 import 'package:google_fonts/google_fonts.dart';
+import 'package:travy/src/bloc/destination_bloc.dart';
 import 'package:travy/src/common.dart';
+import 'package:travy/src/data/destination_repository.dart';
 import 'package:travy/src/main_nav.dart';
-import 'package:travy/src/pages/home_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -15,7 +16,12 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.grey.shade100,
         textTheme: GoogleFonts.robotoTextTheme(),
       ),
-      home: const MainNav(),
+      home: BlocProvider(
+        create: (context) => DestinationBloc(
+          destinationRepository: DestinationRepository(),
+        )..add(const DestinationLoading()),
+        child: const MainNav(),
+      ),
     );
   }
 }
