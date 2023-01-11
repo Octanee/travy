@@ -23,8 +23,17 @@ class DestinationState extends Equatable {
         .where((destination) => destination.category == category)
         .toList()
       ..sort(
-        (a, b) => a.score.compareTo(b.score),
+        (a, b) => b.score.compareTo(a.score),
       );
+
+    return data.take(5).toList();
+  }
+
+  List<Destination> nerbyDestinations() {
+    final data = destinations
+        .where((destination) => destination.category == category)
+        .toList()
+      ..shuffle();
 
     return data.take(5).toList();
   }
