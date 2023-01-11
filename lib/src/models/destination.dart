@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:travy/src/models/category.dart';
 
 class Destination {
