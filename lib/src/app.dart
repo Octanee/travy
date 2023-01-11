@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         scaffoldBackgroundColor: Colors.grey.shade100,
-        textTheme: GoogleFonts.robotoTextTheme(),
+        textTheme: GoogleFonts.workSansTextTheme(),
       ),
       home: BlocProvider(
         create: (context) => DestinationBloc(
